@@ -1,0 +1,50 @@
+@page "/contactenos"
+@rendermode InteractiveServer
+
+<PageTitle>Contáctenos</PageTitle>
+
+<h1>Contáctenos</h1>
+<p>Si tiene alguna pregunta o comentario, no dude en contactarnos a través del siguiente formulario:</p>
+
+@if (enviado)
+{
+    <p role="status" class="text-success">Gracias por contactarnos</p>
+}
+else
+{
+    <form @onsubmit="EnviarFormulario">
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" @bind="nombre" placeholder="Ingrese su nombre" />
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Correo Electrónico:</label>
+        <input type="email" class="form-control" id="email" @bind="email" placeholder="Ingrese su correo electrónico" />
+    </div>
+
+    <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje:</label>
+        <textarea class="form-control" id="mensaje" rows="4" @bind="mensaje" placeholder="Escriba su mensaje aquí"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+}
+
+@code {
+    private string nombre = "";
+    private string email = "";
+    private string mensaje = "";
+    private bool enviado = false;
+
+    private void EnviarFormulario()
+    {
+        enviado = true;
+    }
+}
+
+
+
+
+
