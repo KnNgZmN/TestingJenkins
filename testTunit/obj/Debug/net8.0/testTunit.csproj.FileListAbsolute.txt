@@ -53,14 +53,6 @@ D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTUnit\obj\
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTUnit\obj\Debug\net8.0\testTunit.pdb
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTUnit\obj\Debug\net8.0\testTunit.genruntimeconfig.cache
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTUnit\obj\Debug\net8.0\ref\testTunit.dll
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.deps.json
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.exe
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.dll
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.pdb
-E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.deps.json
-E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.runtimeconfig.json
-E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.exe
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\testTunit.exe
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\testTunit.deps.json
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\testTunit.runtimeconfig.json
@@ -101,8 +93,6 @@ E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\tr\Microsoft.Testing.Extensions.MSBuild.resources.dll
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\zh-Hans\Microsoft.Testing.Extensions.MSBuild.resources.dll
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\zh-Hant\Microsoft.Testing.Extensions.MSBuild.resources.dll
-E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.dll
-E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\ConsoleApp1.pdb
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\obj\Debug\net8.0\testTunit.csproj.AssemblyReference.cache
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\obj\Debug\net8.0\testTunit.GeneratedMSBuildEditorConfig.editorconfig
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\obj\Debug\net8.0\testTunit.gentestingplatformentrypointinputcache.cache
@@ -149,7 +139,6 @@ D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\Microsoft.JSInterop.dll
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\System.Text.Json.dll
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\BlazorApp1.dll
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\BlazorApp1.pdb
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\appsettings.Development.json
@@ -186,3 +175,6 @@ E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\BlazorApp1.dll
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\BlazorApp1.pdb
+E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\obj\Debug\net8.0\testTunit.sourcelink.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\bin\Debug\net8.0\BlazorApp1.staticwebassets.endpoints.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\testTunit\obj\Debug\net8.0\testTunit.sourcelink.json

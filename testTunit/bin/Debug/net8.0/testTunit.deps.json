@@ -9,7 +9,6 @@
       "testTunit/1.0.0": {
         "dependencies": {
           "BlazorApp1": "1.0.0",
-          "ConsoleApp1": "1.0.0",
           "TUnit": "0.75.11",
           "bunit": "1.40.0"
         },
@@ -539,14 +538,6 @@
             "fileVersion": "1.0.0.0"
           }
         }
-      },
-      "ConsoleApp1/1.0.0": {
-        "runtime": {
-          "ConsoleApp1.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
       }
     }
   },
@@ -872,11 +863,6 @@
       "hashPath": "tunit.engine.0.75.11.nupkg.sha512"
     },
     "BlazorApp1/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ConsoleApp1/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

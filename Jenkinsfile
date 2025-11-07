@@ -1,6 +1,13 @@
 pipeline {
     agent any
-    stages {
+      stages {
+
+        stage('Clean') {
+            steps {
+                bat 'dotnet clean'
+            }
+        }
+
         stage('Restore') {
             steps {
                 bat 'dotnet restore'
@@ -13,7 +20,12 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat 'dotnet test --no-build --verbosity normal'
+                bat 'dotnet test --no-build --logger "trx;LogFileName=test_results.trx" --results-directory TestResults'
+            }
+            post {
+                always {
+                    junit 'TestResults/*.trx'
+                }
             }
         }
         stage('Publish') {
@@ -31,9 +43,6 @@ pipeline {
             echo '❌ Algo falló en la compilación o pruebas.'
         }
 
-        /*
-        Prueba de Publicacion
-        */
     }
 }
 

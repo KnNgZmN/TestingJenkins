@@ -1,0 +1,120 @@
+@page "/SoftwareCalculator"
+@rendermode InteractiveServer
+
+<PageTitle>Software Cost Calculator</PageTitle>
+
+<h1>Calculadora de Costo y Tiempo de Software</h1>
+
+<div class="card p-3">
+
+    <h5>1️⃣ Calcular Puntos de Complejidad</h5>
+    <p class="text-muted">Ingresa la cantidad de elementos de cada tipo en tu proyecto.</p>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="ei" class="form-label">Entradas Externas (EI)</label>
+            <input type="number" id="ei" @bind="EntradasExternas" class="form-control" min="0" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="eo" class="form-label">Salidas Externas (EO)</label>
+            <input type="number" id="eo" @bind="SalidasExternas" class="form-control" min="0" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="eq" class="form-label">Consultas Externas (EQ)</label>
+            <input type="number" id="eq" @bind="ConsultasExternas" class="form-control" min="0" />
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="ilf" class="form-label">Archivos Internos (ILF)</label>
+            <input type="number" id="ilf" @bind="ArchivosInternos" class="form-control" min="0" />
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <label for="eif" class="form-label">Archivos de Interfaz Externos (EIF)</label>
+        <input type="number" id="eif" @bind="ArchivosExternos" class="form-control" min="0" />
+    </div>
+
+    <button class="btn btn-secondary" @onclick="CalcularPuntosComplejidad">Calcular Puntos de Complejidad</button>
+
+    <div class="alert alert-secondary mt-3">
+        <p role="status">@MensajeComplejidad</p>
+    </div>
+
+    <hr />
+
+    <h5>2️⃣ Calcular Costo y Tiempo Estimado</h5>
+
+    <div class="mb-3">
+        <label for="cost" class="form-label">Costo por punto (USD):</label>
+        <input type="number" id="cost" @bind="CostPerPoint" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label for="hours" class="form-label">Horas por punto:</label>
+        <input type="number" id="hours" @bind="HoursPerPoint" class="form-control" />
+    </div>
+
+    <button class="btn btn-primary" @onclick="CalcularCostoYTiempo">Calcular Costo y Tiempo</button>
+
+    <div class="alert alert-info mt-3">
+        <p role="status">@MensajeCosto</p>
+    </div>
+</div>
+
+@code {
+    // --- Variables para el cálculo de puntos ---
+    private int EntradasExternas { get; set; }
+    private int SalidasExternas { get; set; }
+    private int ConsultasExternas { get; set; }
+    private int ArchivosInternos { get; set; }
+    private int ArchivosExternos { get; set; }
+
+    private int TotalPuntos { get; set; }
+    private string NivelComplejidad { get; set; } = "";
+    private string MensajeComplejidad { get; set; } = "Ingrese los datos para calcular los puntos de complejidad.";
+
+    // --- Variables para el cálculo de costo y tiempo ---
+    private decimal CostPerPoint { get; set; } = 50m;
+    private decimal TotalCost { get; set; }
+    private int HoursPerPoint { get; set; } = 4; // Por defecto, 1 punto = 4 horas
+    private int TotalHours { get; set; }
+    private decimal TotalDays => Math.Round(TotalHours / 8m, 2); // Asumiendo 8 horas por día
+    private string MensajeCosto { get; set; } = "Ingrese el costo por punto y horas por punto.";
+
+    private void CalcularPuntosComplejidad()
+    {
+        // Pesos estándar: EI=3, EO=4, EQ=3, ILF=7, EIF=5
+        TotalPuntos = (EntradasExternas * 3)
+                    + (SalidasExternas * 4)
+                    + (ConsultasExternas * 3)
+                    + (ArchivosInternos * 7)
+                    + (ArchivosExternos * 5);
+
+        NivelComplejidad = TotalPuntos switch
+        {
+            <= 20 => "Baja",
+            <= 50 => "Media",
+            _ => "Alta"
+        };
+
+        MensajeComplejidad = $"Puntos de complejidad estimados: {TotalPuntos} (Nivel: {NivelComplejidad}).";
+    }
+
+    private void CalcularCostoYTiempo()
+    {
+        if (TotalPuntos == 0)
+        {
+            MensajeCosto = "Primero calcule los puntos de complejidad.";
+            return;
+        }
+
+        TotalCost = TotalPuntos * CostPerPoint;
+        TotalHours = TotalPuntos * HoursPerPoint;
+
+        MensajeCosto = $"Costo total estimado: {TotalCost.ToString("C")} — {TotalPuntos} puntos — " +
+                       $"Tiempo: {TotalHours} horas (~{TotalDays} días) (Nivel: {NivelComplejidad}).";
+    }
+}

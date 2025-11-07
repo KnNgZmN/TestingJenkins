@@ -13,11 +13,6 @@ D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\BlazorApp1.MvcApplicationPartsAssemblyInfo.cache
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.json
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets.development.json
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.BlazorApp1.Microsoft.AspNetCore.StaticWebAssets.props
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.build.BlazorApp1.props
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.BlazorApp1.props
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.BlazorApp1.props
-D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets.pack.json
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\scopedcss\bundle\BlazorApp1.styles.css
@@ -58,3 +53,12 @@ E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\BlazorApp1.pdb
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\BlazorApp1.genruntimeconfig.cache
 E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\ref\BlazorApp1.dll
+E:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\BlazorApp1.sourcelink.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\bin\Debug\net8.0\BlazorApp1.staticwebassets.endpoints.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\BlazorApp1.sourcelink.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Universitaria\6 Semestre\Ingenieria de Software ll\PruebaTunit\BlazorApp1\obj\Debug\net8.0\staticwebassets.build.json.cache
