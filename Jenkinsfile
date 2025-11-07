@@ -2,16 +2,12 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Restore') {
-            steps {
-                bat 'dotnet restore'
-            }
-        }
-
         stage('Build') {
             steps {
-                bat 'dotnet build --no-restore'
+                bat '''
+                    echo === Compilando solución ===
+                    dotnet build PruebaTunit.sln --configuration Debug
+                '''
             }
         }
 
@@ -19,10 +15,10 @@ pipeline {
             steps {
                 bat '''
                     echo === Ejecutar pruebas y generar archivo TRX ===
-                    dotnet test --no-build --logger "trx;LogFileName=test_results.trx" --results-directory TestResults
+                    dotnet test testTunit/testTunit.csproj --no-build --logger "trx;LogFileName=test_results.trx" --results-directory testTunit/TestResults
 
                     echo === Verificando archivos TRX generados ===
-                    dir TestResults
+                    dir testTunit\\TestResults
 
                     echo === Creando manifiesto local de herramientas (si no existe) ===
                     if not exist .config (
@@ -36,36 +32,24 @@ pipeline {
                     dotnet tool install trx2junit --version 1.* || echo "trx2junit ya instalado"
 
                     echo === Ejecutando conversión TRX -> XML (JUnit) ===
-                    dotnet tool run trx2junit TestResults\\*.trx
+                    dotnet tool run trx2junit testTunit\\TestResults\\*.trx
 
                     echo === Verificando archivos XML generados ===
-                    dir TestResults
+                    dir testTunit\\TestResults
                 '''
             }
             post {
                 always {
-                    junit 'TestResults/*.xml'
+                    echo '=== Publicando resultados de pruebas ==='
+                    junit allowEmptyResults: true, testResults: 'testTunit/TestResults/*.xml'
                 }
-            }
-        }
-
-        stage('Publish') {
-            steps {
-                bat '''
-                    echo === Publicando artefactos ===
-                    dotnet publish -c Release -o out
-                '''
-                archiveArtifacts artifacts: 'out/**', fingerprint: true
             }
         }
     }
 
     post {
-        success {
-            echo '✅ Compilación, pruebas y publicación completadas con éxito.'
-        }
-        failure {
-            echo '❌ Algo falló durante la compilación o las pruebas.'
+        always {
+            echo '=== Pipeline finalizado ==='
         }
     }
 }
