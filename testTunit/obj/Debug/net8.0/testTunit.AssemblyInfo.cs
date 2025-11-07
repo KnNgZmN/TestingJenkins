@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("testTunit")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95fecec6ba0f95142330749d8f40b9c2c097884e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a15f29e61b0553c50ad5684b17f084037fe35fe")]
 [assembly: System.Reflection.AssemblyProductAttribute("testTunit")]
 [assembly: System.Reflection.AssemblyTitleAttribute("testTunit")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

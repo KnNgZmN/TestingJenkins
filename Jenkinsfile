@@ -18,17 +18,28 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                    rem === Ejecutar pruebas y generar archivo TRX ===
+                    echo === Ejecutar pruebas y generar archivo TRX ===
                     dotnet test --no-build --logger "trx;LogFileName=test_results.trx" --results-directory TestResults
 
-                    rem === Instalar herramienta trx2junit si no existe ===
-                    dotnet tool install -g trx2junit || echo "trx2junit ya instalado"
+                    echo === Verificando archivos TRX generados ===
+                    dir TestResults
 
-                    rem === Agregar las herramientas globales al PATH (solo necesario en Windows) ===
-                    set PATH=%PATH%;%USERPROFILE%\\.dotnet\\tools
+                    echo === Creando manifiesto local de herramientas (si no existe) ===
+                    if not exist .config (
+                        mkdir .config
+                    )
+                    if not exist .config\\dotnet-tools.json (
+                        dotnet new tool-manifest
+                    )
 
-                    rem === Convertir los resultados TRX a XML (formato JUnit compatible con Jenkins) ===
-                    trx2junit TestResults\\*.trx
+                    echo === Instalando trx2junit localmente ===
+                    dotnet tool install trx2junit --version 1.* || echo "trx2junit ya instalado"
+
+                    echo === Ejecutando conversión TRX -> XML (JUnit) ===
+                    dotnet tool run trx2junit TestResults\\*.trx
+
+                    echo === Verificando archivos XML generados ===
+                    dir TestResults
                 '''
             }
             post {
@@ -41,6 +52,7 @@ pipeline {
         stage('Publish') {
             steps {
                 bat '''
+                    echo === Publicando artefactos ===
                     dotnet publish -c Release -o out
                 '''
                 archiveArtifacts artifacts: 'out/**', fingerprint: true
@@ -50,11 +62,10 @@ pipeline {
 
     post {
         success {
-            echo '✅ Compilación y pruebas completadas con éxito.'
+            echo '✅ Compilación, pruebas y publicación completadas con éxito.'
         }
         failure {
-            echo '❌ Algo falló en la compilación o pruebas.'
+            echo '❌ Algo falló durante la compilación o las pruebas.'
         }
     }
 }
-
