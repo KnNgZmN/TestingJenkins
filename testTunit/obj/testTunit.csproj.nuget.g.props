@@ -20,5 +20,6 @@
     <Import Project="$(NuGetPackageRoot)tunit.engine\0.75.11\buildTransitive\net8.0\TUnit.Engine.props" Condition="Exists('$(NuGetPackageRoot)tunit.engine\0.75.11\buildTransitive\net8.0\TUnit.Engine.props')" />
     <Import Project="$(NuGetPackageRoot)tunit.assertions\0.75.11\buildTransitive\net8.0\TUnit.Assertions.props" Condition="Exists('$(NuGetPackageRoot)tunit.assertions\0.75.11\buildTransitive\net8.0\TUnit.Assertions.props')" />
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.authentication\8.0.11\buildTransitive\Microsoft.AspNetCore.Components.WebAssembly.Authentication.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly.authentication\8.0.11\buildTransitive\Microsoft.AspNetCore.Components.WebAssembly.Authentication.props')" />
+    <Import Project="$(NuGetPackageRoot)junittestlogger\1.1.0\build\netstandard2.0\JUnitTestLogger.props" Condition="Exists('$(NuGetPackageRoot)junittestlogger\1.1.0\build\netstandard2.0\JUnitTestLogger.props')" />
   </ImportGroup>
 </Project>

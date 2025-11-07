@@ -122,6 +122,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "JUnitTestLogger": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "TUnit": {
               "target": "Package",
               "version": "[0.75.11, )"
