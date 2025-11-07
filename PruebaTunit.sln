@@ -4,8 +4,6 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testTunit", "testTunit\testTunit.csproj", "{E0D8F64B-7A2F-BE10-DB2D-DA2F200820EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{78F24504-1E7C-4EC7-9109-60E942C8AD43}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{F1B06B94-642C-421D-8ECB-FA497523FC74}"
 EndProject
 Global
