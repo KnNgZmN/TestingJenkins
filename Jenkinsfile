@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 bat '''
-                    echo === Compilando solución ===
+                    echo === Etapa de compilación ===
                     dotnet build PruebaTunit.sln --configuration Debug
                 '''
             }
@@ -14,24 +14,23 @@ pipeline {
         stage('Test') {
             steps {
                 bat '''
-                    echo === Ejecutando pruebas y generando XML JUnit ===
-                    dotnet test testTunit/testTunit.csproj --no-build --logger "junit;LogFilePath=testTunit/TestResults/test_results.xml"
-                    echo === Verificando archivo XML generado ===
-                    dir testTunit\\TestResults
+                    echo === Ejecutando pruebas unitarias ===
+                    dotnet test testTunit/testTunit.csproj --no-build --configuration Debug --verbosity normal
                 '''
-            }
-            post {
-                always {
-                    echo '=== Publicando resultados JUnit ==='
-                    junit 'testTunit/TestResults/*.xml'
-                }
             }
         }
     }
 
     post {
+        success {
+            echo '✅ Todas las pruebas pasaron correctamente.'
+        }
+        failure {
+            echo '❌ Fallaron algunas pruebas.'
+        }
         always {
             echo '=== Pipeline finalizado ==='
         }
     }
 }
+
