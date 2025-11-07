@@ -27,7 +27,7 @@ public class Tests
         using var ctx = new Bunit.TestContext();
         var componente = ctx.RenderComponent<SoftwareCostCalculator>();
 
-        // Completa los valores
+        // Completa los valores .
         componente.Find("#ei").Change("2");
         componente.Find("#eo").Change("1");
         componente.Find("#eq").Change("0");
