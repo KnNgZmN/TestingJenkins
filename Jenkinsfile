@@ -1,12 +1,6 @@
 pipeline {
     agent any
-      stages {
-
-        stage('Clean') {
-            steps {
-                bat 'dotnet clean'
-            }
-        }
+      stages {        
 
         stage('Restore') {
             steps {
